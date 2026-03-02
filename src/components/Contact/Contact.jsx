@@ -20,10 +20,10 @@ export default function Contact() {
     setError('')
 
     try {
-      // EmailJS configuration
-      const serviceID = 'service_yj8ahdq'
-      const templateID = 'template_5gxr2ht'
-      const publicKey = 'dYXNNOgQTS7KPBjU2'
+      // EmailJS configuration from environment variables
+      const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+      const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
       await emailjs.sendForm(
         serviceID,
