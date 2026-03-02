@@ -162,13 +162,35 @@ Free tier: 200 emails/month
 
 ## 🌐 Deployment
 
-### Vercel (Recommended)
-1. Push code to GitHub
-2. Import project on [Vercel](https://vercel.com)
-3. Add environment variables in project settings
-4. Deploy!
+### Vercel + GitHub (Recommended - CI/CD Enabled)
 
-### Netlify
+**Step 1: Push to GitHub**
+```bash
+git add .
+git commit -m "Ready for deployment"
+git push origin main
+```
+
+**Step 2: Deploy on Vercel**
+1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
+2. Click "Add New Project"
+3. Import your portfolio repository
+4. Vercel auto-detects Vite configuration ✅
+5. Add environment variables:
+   - `VITE_EMAILJS_SERVICE_ID`
+   - `VITE_EMAILJS_TEMPLATE_ID`
+   - `VITE_EMAILJS_PUBLIC_KEY`
+6. Click "Deploy"
+
+**✨ CI/CD Active!** Every push to `main` automatically deploys. Preview deployments created for PRs.
+
+**Step 3: Add Custom Domain (GitHub Student Pack)**
+1. Get free domain from [Namecheap](https://education.github.com/pack) (.me domain)
+2. In Vercel project → Settings → Domains
+3. Add your domain and follow DNS instructions
+4. SSL certificate auto-configured 🔒
+
+### Netlify (Alternative)
 1. Connect GitHub repository
 2. Build command: `npm run build`
 3. Publish directory: `dist`
