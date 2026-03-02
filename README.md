@@ -162,14 +162,31 @@ Free tier: 200 emails/month
 
 ## 🌐 Deployment
 
-### Vercel + GitHub (Recommended - CI/CD Enabled)
+### GitHub Pages (Free Forever) ✅🎉
+
+**Your site will be live at:** `https://lakshaymittal45.github.io/Lakshay-s-Portfolio/`
 
 **Step 1: Push to GitHub**
 ```bash
 git add .
-git commit -m "Ready for deployment"
+git commit -m "Setup GitHub Pages deployment"
 git push origin main
 ```
+
+**Step 2: Enable GitHub Pages**
+1. Go to your GitHub repository
+2. Click **Settings** → **Pages** (left sidebar)
+3. Under "Build and deployment":
+   - Source: **GitHub Actions** ✅
+4. That's it! Wait 2-3 minutes for first deployment
+
+**✨ CI/CD Active!** Every push to `main` automatically rebuilds and deploys your site.
+
+**No environment variables needed on GitHub!** EmailJS keys work from client-side.
+
+### Alternative: Vercel + GitHub (Bonus CI/CD)
+
+**Step 1: Push to GitHub** (same as above)
 
 **Step 2: Deploy on Vercel**
 1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
@@ -182,20 +199,11 @@ git push origin main
    - `VITE_EMAILJS_PUBLIC_KEY`
 6. Click "Deploy"
 
-**✨ CI/CD Active!** Every push to `main` automatically deploys. Preview deployments created for PRs.
-
 **Step 3: Add Custom Domain (GitHub Student Pack)**
 1. Get free domain from [Namecheap](https://education.github.com/pack) (.me domain)
 2. In Vercel project → Settings → Domains
 3. Add your domain and follow DNS instructions
 4. SSL certificate auto-configured 🔒
-
-### Netlify (Alternative)
-1. Connect GitHub repository
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-4. Add environment variables
-5. Deploy!
 
 ## 📄 License
 
