@@ -1,0 +1,6 @@
+/* App.css — overridden by index.css anime theme */
+#root {
+  position: relative;
+  z-index: 3;
+}
+

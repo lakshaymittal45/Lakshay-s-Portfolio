@@ -1,0 +1,210 @@
+.skills-section {
+  background: linear-gradient(180deg, var(--dark-bg) 0%, #080015 60%, var(--dark-bg) 100%);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto 60px;
+}
+
+.skill-card {
+  padding: 28px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  border-color: rgba(230, 57, 70, 0.4);
+}
+
+.skill-card.active {
+  border-color: rgba(255, 215, 0, 0.5);
+  background: rgba(255, 215, 0, 0.02);
+}
+
+.skill-card-border-glow {
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(230, 57, 70, 0.3));
+  border-radius: 4px;
+  z-index: -1;
+  filter: blur(8px);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.skill-card:last-child .skill-card-header {
+  border-bottom-color: rgba(230, 57, 70, 0.2);
+}
+
+.skill-card:last-child .skill-bar-fill {
+  background: linear-gradient(90deg, var(--crimson), var(--blood-red), #ff6b7a);
+}
+
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(230, 57, 70, 0.15);
+}
+.skill-card-icon { 
+  font-size: 1.4rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.skill-card:hover .skill-card-icon {
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+}
+.skill-card-title {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 0.85rem;
+  color: var(--white);
+  letter-spacing: 2px;
+}
+
+/* Skill bars */
+.skill-bars { display: flex; flex-direction: column; gap: 18px; }
+
+.skill-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 4px 0;
+}
+
+.skill-item:hover {
+  transform: translateX(4px);
+}
+
+.skill-item:hover .skill-name {
+  color: rgba(240, 230, 255, 1);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.skill-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(240, 230, 255, 0.8);
+  letter-spacing: 1px;
+}
+.skill-label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(240, 230, 255, 0.5);
+  font-style: italic;
+}
+.skill-percent {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.65rem;
+  color: var(--gold);
+  opacity: 0.8;
+}
+
+.skill-bar-track {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+  overflow: visible;
+  position: relative;
+}
+
+.skill-bar-glow {
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(90deg, var(--blood-red), var(--crimson), var(--gold));
+  border-radius: 4px;
+  filter: blur(8px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blood-red), var(--crimson), var(--gold));
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 0 8px rgba(230, 57, 70, 0.5);
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-bar-fill {
+  box-shadow: 0 0 16px rgba(230, 57, 70, 0.8), 0 0 24px rgba(255, 215, 0, 0.4);
+}
+
+.skill-bar-fill::after {
+  content: '';
+  position: absolute;
+  right: -1px; top: -2px;
+  width: 6px; height: 8px;
+  background: var(--gold);
+  border-radius: 1px;
+  box-shadow: 0 0 6px var(--gold);
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-bar-fill::after {
+  box-shadow: 0 0 12px var(--gold), 0 0 20px var(--gold);
+}
+
+/* Tech badges */
+.tech-badges {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.badges-label {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  color: rgba(240, 230, 255, 0.3);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.tech-badge {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(240, 230, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 6px 16px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px) 100%, 0% 100%);
+}
+.tech-badge:hover {
+  color: var(--gold);
+  border-color: rgba(255, 215, 0, 0.4);
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.tech-badge.soft-skill {
+  border-color: rgba(230, 57, 70, 0.2);
+  color: rgba(240, 230, 255, 0.6);
+}
+.tech-badge.soft-skill:hover {
+  color: var(--crimson);
+  border-color: rgba(230, 57, 70, 0.5);
+  background: rgba(230, 57, 70, 0.08);
+}

@@ -1,0 +1,186 @@
+.about-section {
+  background: linear-gradient(180deg, var(--dark-bg) 0%, #0a0010 50%, var(--dark-bg) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-bg-symbol {
+  position: absolute;
+  font-size: 8rem;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(2px);
+  user-select: none;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Art column */
+.about-art-card {
+  padding: 2px;
+  border-radius: 4px;
+}
+.about-art-inner {
+  padding: 40px 30px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(230, 57, 70, 0.15);
+}
+.about-kanji-art {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.kanji-big {
+  font-family: serif;
+  font-size: 5rem;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--crimson);
+  text-shadow: 0 0 30px rgba(230, 57, 70, 0.2);
+  line-height: 1;
+  animation: kanji-glow 3s ease-in-out infinite alternate;
+}
+@keyframes kanji-glow {
+  from { -webkit-text-stroke-color: var(--crimson); }
+  to { -webkit-text-stroke-color: var(--gold); text-shadow: 0 0 30px rgba(255, 215, 0, 0.3); }
+}
+.kanji-small {
+  font-family: serif;
+  font-size: 2.5rem;
+  color: var(--gold);
+  opacity: 0.6;
+}
+.kanji-meaning {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  color: rgba(240, 230, 255, 0.4);
+  text-transform: uppercase;
+}
+
+/* Stats */
+.about-card-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.stat-item {
+  padding: 20px 16px;
+  border-right: 1px solid rgba(230, 57, 70, 0.1);
+  border-top: 1px solid rgba(230, 57, 70, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(230, 57, 70, 0.05), rgba(255, 215, 0, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.stat-item:hover::before {
+  opacity: 1;
+}
+.stat-item:nth-child(even) { border-right: none; }
+.stat-value {
+  display: block;
+  font-family: 'Orbitron', monospace;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--crimson);
+  text-shadow: var(--glow-red);
+  margin-bottom: 4px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.stat-item:hover .stat-value {
+  transform: scale(1.1);
+}
+.stat-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(240, 230, 255, 0.45);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+/* Text column */
+.about-tag {
+  display: inline-block;
+  font-family: 'Orbitron', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  color: var(--gold);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  padding: 5px 14px;
+  margin-bottom: 20px;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+}
+
+.about-heading {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  line-height: 1.4;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+.about-heading span { color: var(--crimson); text-shadow: var(--glow-red); }
+
+.about-paragraphs p {
+  font-size: 1.05rem;
+  color: rgba(240, 230, 255, 0.65);
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+.about-paragraphs strong { color: var(--white); }
+
+/* Pillar tags */
+.about-pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+.pillar-tag {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--crimson);
+  border: 1px solid rgba(230, 57, 70, 0.35);
+  padding: 5px 14px;
+  text-transform: uppercase;
+  clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px) 100%, 0% 100%);
+  transition: all 0.3s;
+}
+.pillar-tag:hover {
+  background: rgba(230, 57, 70, 0.1);
+  border-color: var(--crimson);
+  box-shadow: var(--glow-red);
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-art-card { max-width: 400px; margin: 0 auto; }
+}
