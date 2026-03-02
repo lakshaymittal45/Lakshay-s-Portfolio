@@ -414,7 +414,7 @@ export default function IntroScene({ onComplete }) {
                 animate={{ opacity: 1, scaleX: 1 }}
                 transition={{ delay: 0.4, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               >
-                MITTAPALLI
+                MITTAL
               </motion.h1>
 
               <motion.p
