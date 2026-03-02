@@ -33,6 +33,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_EMAILJS_SERVICE_ID: service_yj8ahdq
+          VITE_EMAILJS_TEMPLATE_ID: template_5gxr2ht
+          VITE_EMAILJS_PUBLIC_KEY: dYXNNOgQTS7KPBjU2
 
       - name: Add .nojekyll file
         run: touch dist/.nojekyll
