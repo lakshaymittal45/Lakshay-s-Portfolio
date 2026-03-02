@@ -5,7 +5,7 @@ import './AnimeCompanion.css'
 const dialogues = {
   hero: [
     "Welcome, traveler! I am your guide through this portfolio realm. ⚔",
-    "This is the domain of Mittal — a code warrior of immense potential!",
+    "This is the domain of Lakshay Mittal — a code warrior of immense potential!",
     "Scroll down to witness the legend unfold... 👁",
   ],
   about: [
