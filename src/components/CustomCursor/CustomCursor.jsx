@@ -1,11 +1,18 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import './CustomCursor.css'
 
 export default function CustomCursor() {
   const dotRef = useRef(null)
   const ringRef = useRef(null)
 
+  const isCoarsePointer = useMemo(
+    () => typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches,
+    []
+  )
+
   useEffect(() => {
+    if (isCoarsePointer) return undefined
+
     const dot = dotRef.current
     const ring = ringRef.current
     let mouseX = 0, mouseY = 0
@@ -36,15 +43,26 @@ export default function CustomCursor() {
       ring.classList.remove('cursor-hover')
     }
 
+    const hoverTargets = document.querySelectorAll('a, button, [data-cursor]')
+
     document.addEventListener('mousemove', onMove)
-    document.querySelectorAll('a, button, [data-cursor]').forEach(el => {
+    hoverTargets.forEach(el => {
       el.addEventListener('mouseenter', onEnter)
       el.addEventListener('mouseleave', onLeave)
     })
 
     animate()
-    return () => document.removeEventListener('mousemove', onMove)
-  }, [])
+
+    return () => {
+      document.removeEventListener('mousemove', onMove)
+      hoverTargets.forEach(el => {
+        el.removeEventListener('mouseenter', onEnter)
+        el.removeEventListener('mouseleave', onLeave)
+      })
+    }
+  }, [isCoarsePointer])
+
+  if (isCoarsePointer) return null
 
   return (
     <>
