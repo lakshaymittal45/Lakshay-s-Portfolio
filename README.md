@@ -1,4 +1,4 @@
-# 🎌 Lakshay's Anime-Themed Portfolio
+# 🎌 Lakshay's Portfolio
 
 A stunning anime-themed portfolio website featuring warrior animations, fire particles, floating elements, and an immersive dark aesthetic inspired by Demon Slayer.
 
