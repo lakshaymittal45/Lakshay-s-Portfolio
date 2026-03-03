@@ -82,23 +82,6 @@ section { position: relative; overflow: hidden; }
 .text-glow-red { text-shadow: var(--glow-red); }
 .text-glow-gold { text-shadow: var(--glow-gold); }
 
-/* ===== SCAN LINES ===== */
-.scanlines {
-  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-  background: repeating-linear-gradient(
-    to bottom, transparent 0px, transparent 2px,
-    rgba(0,0,0,0.07) 2px, rgba(0,0,0,0.07) 4px
-  );
-  pointer-events: none; z-index: 9999;
-  animation: scanline-flicker 8s infinite;
-}
-
-@keyframes scanline-flicker {
-  0%, 95%, 100% { opacity: 0.35; }
-  97% { opacity: 0.6; }
-  98.5% { opacity: 0.1; }
-}
-
 /* ===== CUSTOM CURSOR ===== */
 .cursor-dot {
   width: 6px; height: 6px; background: var(--crimson); border-radius: 50%;

@@ -195,7 +195,7 @@ export default function Contact() {
       <footer className="footer">
         <div className="footer-line" />
         <p className="footer-text">
-          © 2026 <span>Lakshay Mittal</span> · Built with React + Passion + Anime Energy
+          © 2026 <span>Lakshay Mittal</span> · Built with React + Passion + Warrior Energy
         </p>
         <p className="footer-sub">
           &ldquo;If you don&rsquo;t like your destiny, don&rsquo;t accept it.&rdquo; — Naruto

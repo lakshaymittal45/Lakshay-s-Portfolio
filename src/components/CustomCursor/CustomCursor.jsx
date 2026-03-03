@@ -19,8 +19,9 @@ export default function CustomCursor() {
     }
 
     const animate = () => {
-      ringX += (mouseX - ringX) * 0.12
-      ringY += (mouseY - ringY) * 0.12
+      // Faster easing toward the pointer for a snappier feel
+      ringX += (mouseX - ringX) * 0.25
+      ringY += (mouseY - ringY) * 0.25
       ring.style.left = ringX + 'px'
       ring.style.top = ringY + 'px'
       requestAnimationFrame(animate)

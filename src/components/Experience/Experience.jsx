@@ -8,7 +8,7 @@ const timeline = [
     type: 'edu',
     title: 'B.Tech – Electrical Engineering (Minor in Computer Science)',
     place: 'Punjab Engineering College (PEC), Chandigarh',
-    detail: 'CGPA: 8.65/10. Specialization in AI & software engineering. Strong foundation in electrical systems combined with computer science expertise.',
+    detail: 'CGPA: 8.05/10.Strong foundation in electrical systems combined with computer science expertise.',
     tags: ['AIML', 'Full Stack', 'Data Structures', 'Software Engineering'],
   },
   {
@@ -17,7 +17,7 @@ const timeline = [
     title: 'Software Developer & AI Research Intern',
     place: 'IIT Ropar & Homi Bhabha Cancer Hospital (Dr. Tata Memorial)',
     detail: 'Architected specialized cohort data platform for large-scale biomedical studies. Built end-to-end Medical Voice AI pipeline (ASR, NLP-based clinical note extraction). Delivered production-grade clinical software with secure data handling & HIPAA compliance.',
-    tags: ['Python', 'FastAPI', 'ML', 'NLP', 'Healthcare AI'],
+    tags: ['Python', 'FastAPI', 'ML', 'NLP', 'Healthcare AI','Full Stack'],
   },
   {
     year: 'Sep 2025 – Nov 2025',

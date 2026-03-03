@@ -19,7 +19,7 @@ export default function About() {
       {/* Animated background elements */}
       <motion.div
         className="about-bg-symbol"
-        style={{ left: '5%', top: '20%' }}
+        style={{ left: "5%", top: "20%" }}
         animate={{
           rotate: [0, 360],
           scale: [1, 1.1, 1],
@@ -31,7 +31,7 @@ export default function About() {
       </motion.div>
       <motion.div
         className="about-bg-symbol"
-        style={{ right: '8%', top: '60%' }}
+        style={{ right: "8%", top: "60%" }}
         animate={{
           rotate: [360, 0],
           scale: [1.1, 1, 1.1],
@@ -43,7 +43,9 @@ export default function About() {
       </motion.div>
 
       <p className="section-subtitle">— Chapter 01 —</p>
-      <h2 className="section-title">About <span>Me</span></h2>
+      <h2 className="section-title">
+        About <span>Me</span>
+      </h2>
 
       <div className="about-grid">
         {/* Left: Card with art */}
@@ -91,37 +93,61 @@ export default function About() {
         >
           <div className="about-tag">⚔ Origin Story</div>
           <h3 className="about-heading">
-            A developer forged in <span>code</span> and driven by <span>impact</span>
+            A developer forged in <span>code</span> and driven by{" "}
+            <span>impact</span>
           </h3>
 
           <div className="about-paragraphs">
             <p>
-              I&rsquo;m <strong>Lakshay Mittal</strong> — an Electrical Engineering student at Punjab Engineering College
-              with a deep passion for AI & Software Development. Currently working as an AI Research Intern
-              at IIT Ropar & Homi Bhabha Cancer Hospital, building intelligent healthcare systems.
+              I’m <strong>Lakshay Mittal</strong> — an Electrical Engineering
+              student at Punjab Engineering College, driven by a relentless
+              curiosity for AI, systems thinking, and intelligent software.
+              Currently working as an AI Research Intern at IIT Ropar & Homi
+              Bhabha Cancer Hospital, where I design and deploy real-world
+              healthcare intelligence solutions.
             </p>
+
             <p>
-              My journey blends hardware fundamentals with software innovation. I&rsquo;ve built Medical Voice AI pipelines,
-              energy forecasting systems, and emergency call analysis platforms — all aimed at solving real-world problems
-              that make a difference.
+              My foundation in hardware gives me a deep understanding of how
+              systems truly operate — from signals and circuits to scalable
+              cloud architectures. I’ve engineered Medical Voice AI pipelines,
+              built energy forecasting models, and developed emergency call
+              analysis platforms that prioritize precision, reliability, and
+              impact.
             </p>
+
             <p>
-              Whether it&rsquo;s architecting scalable platforms, training ML models, or optimizing full-stack applications,
-              I approach every challenge with the discipline of a code warrior — constantly learning, iterating, and pushing boundaries.
+              I don’t just write code — I architect solutions. Whether it’s
+              training ML models, optimizing backend performance, or crafting
+              full-stack applications, I approach every project with discipline,
+              ownership, and the mindset of a modern-day code warrior —
+              constantly learning, iterating, and pushing beyond the expected.
             </p>
           </div>
 
           <div className="about-pillars">
-            {['Healthcare AI', 'Full Stack', 'Machine Learning', 'Data Science', 'System Design'].map(p => (
-              <span key={p} className="pillar-tag">{p}</span>
+            {[ 
+              "Full Stack",
+              "Machine Learning",
+              "Data Science",
+              "Data Analytics",
+            ].map((p) => (
+              <span key={p} className="pillar-tag">
+                {p}
+              </span>
             ))}
           </div>
 
-          <a href={resumePDF} download="Lakshay_Mittal_Resume.pdf" className="btn-anime btn-anime-gold" style={{ marginTop: '28px', display: 'inline-block' }}>
+          <a
+            href={resumePDF}
+            download="Lakshay_Mittal_Resume.pdf"
+            className="btn-anime btn-anime-gold"
+            style={{ marginTop: "28px", display: "inline-block" }}
+          >
             Download Resume ↓
           </a>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
