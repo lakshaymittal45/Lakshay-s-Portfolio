@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Lakshay Mittal social preview">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#081226" />
+      <stop offset="100%" stop-color="#0f3b73" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="1" y2="0">
+      <stop offset="0%" stop-color="#5cc6ff" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#7de2ff" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" rx="32" />
+  <path d="M1200 340c-160 80-320 80-480 0s-320-80-480 0-240 80-320 40V0h1200Z" fill="url(#accent)" opacity="0.35" />
+  <g fill="#e9f2ff">
+    <text x="120" y="260" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="0.5">Lakshay Mittal</text>
+    <text x="120" y="330" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="500" fill="#c7e3ff">Software Engineer · Full Stack · AI/ML</text>
+    <text x="120" y="390" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="400" fill="#c7e3ff">Building production-grade web platforms and intelligent products.</text>
+    <text x="120" y="440" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400" fill="#b5d9ff">Portfolio · Projects · Experience · Contact</text>
+  </g>
+  <rect x="980" y="120" width="72" height="72" rx="18" fill="#122743" stroke="#7de2ff" stroke-width="3" />
+  <path d="M995 140h12v52h-12zM1012 140h12l12 30 12-30h12v52h-12v-30l-12 26h-6l-12-26v30h-12z" fill="#e9f2ff" />
+</svg>
